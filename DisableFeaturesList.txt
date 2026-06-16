@@ -1,7 +1,0 @@
-FaxServicesClientPackage
-MediaPlayback
-SMB1Protocol
-TelnetClient
-TFTPClient
-WorkFolders-Client
-Xps-Viewer-Box-Feature
