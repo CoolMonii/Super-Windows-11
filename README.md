@@ -6,8 +6,8 @@ A privacy-hardened, telemetry-free Windows 11 IoT Enterprise LTSC installation i
 
 ## Features
 
-**Zero Telemetry**
-Core diagnostic and tracking components (CEIP, UnifiedTelemetryClient, Windows Error Reporting) are removed at the image level — not merely disabled via policy.
+**No Telemetry**
+Core diagnostic and tracking components (CEIP, UnifiedTelemetryClient, Windows Error Reporting) are removed at the image level, not merely disabled via policy.
 
 **Fully Unattended Installation**
 Ships with a pre-configured `autounattend.xml` answer file that automates EULA acceptance, skips all OOBE telemetry prompts, and enforces a local account setup. No network connection required during installation.
@@ -19,7 +19,7 @@ Built on the IoT Enterprise LTSC base, which carries no consumer inbox apps, Xbo
 Legacy compatibility packages, mixed reality components, and unused enterprise management features have been removed, reducing RAM consumption and on-disk footprint.
 
 **10-Year Security Support**
-Aligned with the IoT Enterprise LTSC servicing model — critical security updates through 2034, with no disruptive feature upgrades.
+Aligned with the IoT Enterprise LTSC servicing model - critical security updates through 2034, with no disruptive feature upgrades.
 
 -----
 
@@ -48,7 +48,7 @@ Aligned with the IoT Enterprise LTSC servicing model — critical security updat
 This is an unofficial, community-built Windows image and is not affiliated with or endorsed by Microsoft.
 
 - Provided **as-is**, without warranty of any kind, express or implied.
-- A valid Windows 11 IoT Enterprise LTSC digital license or product key is **required** and is not included. Activate Windows for free with Massgrave Activation Tool
+- A valid Windows 11 IoT Enterprise LTSC digital license or product key is **required** and is not included.
 - Back up all critical data before proceeding. Installation will wipe the target drive.
 
 -----
