@@ -1,12 +1,12 @@
 # Super-11
 
-> A minimal, privacy-respecting Windows 11 Pro image built with [MSMG Toolkit](https://msmgtoolkit.in/). Reduced RAM footprint, smaller ISO, and no telemetry out of the box.
+> A minimal, privacy-respecting Windows 11 IoT image built with [MSMG Toolkit](https://msmgtoolkit.in/). Reduced RAM footprint, smaller ISO, and no telemetry out of the box.
 
 -----
 
 ## Overview
 
-This is a custom Windows 11 Pro build stripped of consumer bloat, tracking services, and legacy components that ship with retail Windows but serve no purpose on a clean workstation. The result is a leaner install that boots faster, uses less memory at idle, and doesn’t phone home.
+This is a custom Windows 11 IoT Enterprise LTSC build stripped of consumer bloat, tracking services, and legacy components that ship with retail Windows but serve no purpose on a clean workstation. The result is a leaner install that boots faster, uses less memory at idle, and doesn’t phone home.
 
 -----
 
