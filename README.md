@@ -35,7 +35,7 @@ Aligned with the IoT Enterprise LTSC servicing model — critical security updat
 
 ## Installation
 
-1. **Download** the latest `Super11_IoT.iso` from the [Releases](../../releases) page.
+1. **Download** the latest `Super11.iso` from the [Releases](../../releases) page.
 1. **Flash to USB** using Rufus. Select the ISO and your target drive, then proceed with default settings.
 1. **Optional — Additional Privacy Hardening:** When Rufus prompts with customization options, enable *“Bypass requirement for an online Microsoft account”* and *“Disable data collection”* for redundant enforcement at the Rufus level.
 1. **Prepare your machine:** Disconnect your Ethernet cable before booting. This is a precaution; the answer file already handles offline enforcement.
@@ -48,7 +48,7 @@ Aligned with the IoT Enterprise LTSC servicing model — critical security updat
 This is an unofficial, community-built Windows image and is not affiliated with or endorsed by Microsoft.
 
 - Provided **as-is**, without warranty of any kind, express or implied.
-- A valid Windows 11 IoT Enterprise LTSC digital license or product key is **required** and is not included.
+- A valid Windows 11 IoT Enterprise LTSC digital license or product key is **required** and is not included. Activate Windows for free with Massgrave Activation Tool
 - Back up all critical data before proceeding. Installation will wipe the target drive.
 
 -----
