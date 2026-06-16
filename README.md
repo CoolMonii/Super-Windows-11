@@ -1,90 +1,59 @@
-# Super-11
+# Super11
 
-> A minimal, privacy-respecting Windows 11 IoT image built with [MSMG Toolkit](https://msmgtoolkit.in/). Reduced RAM footprint, smaller ISO, and no telemetry out of the box.
-
------
-
-## Overview
-
-This is a custom Windows 11 IoT Enterprise LTSC build stripped of consumer bloat, tracking services, and legacy components that ship with retail Windows but serve no purpose on a clean workstation. The result is a leaner install that boots faster, uses less memory at idle, and doesn’t phone home.
+A privacy-hardened, telemetry-free Windows 11 IoT Enterprise LTSC installation image built with [MSMG Toolkit](https://msmgtoolkit.in/). Engineered for sustained performance, long-term stability, and a minimal attack surface — without the overhead of consumer telemetry, bundled applications, or forced online account requirements.
 
 -----
 
-## What Was Removed
+## Features
 
-### Bloatware & Consumer Apps
+**Zero Telemetry**
+Core diagnostic and tracking components (CEIP, UnifiedTelemetryClient, Windows Error Reporting) are removed at the image level — not merely disabled via policy.
 
-|Component                     |Reason                                                 |
-|------------------------------|-------------------------------------------------------|
-|Cortana                       |Replaced by Start Menu search; telemetry source        |
-|Bing News / Weather           |Unused widgets with background data calls              |
-|OneDrive                      |Redundant if using a local or third-party sync solution|
-|Clipchamp, Power Automate     |Niche tools; installable on demand                     |
-|Xbox Overlay & Gaming Services|Unnecessary on non-gaming workstations                 |
-|Zune Media / Media Players    |Legacy, superseded                                     |
-|Get Help, Feedback Hub        |Telemetry endpoints disguised as support apps          |
+**Fully Unattended Installation**
+Ships with a pre-configured `autounattend.xml` answer file that automates EULA acceptance, skips all OOBE telemetry prompts, and enforces a local account setup. No network connection required during installation.
 
-### System Telemetry & Tracking
+**No Pre-installed Applications**
+Built on the IoT Enterprise LTSC base, which carries no consumer inbox apps, Xbox services, or retail-tier bloatware.
 
-- `UnifiedTelemetryClient` — the primary Windows data collection service
-- `WindowsErrorReporting` — crash reports sent to Microsoft
-- `CEIP` (Customer Experience Improvement Program) — background usage analytics
+**Reduced Attack Surface**
+Legacy compatibility packages, mixed reality components, and unused enterprise management features have been removed, reducing RAM consumption and on-disk footprint.
 
-### Corporate & Kiosk Components
-
-- **AssignedAccess** — Kiosk Mode lockdown framework
-- **MultiPointConnector** — Multi-user shared session service
-- **WorkFolders** — Enterprise file sync for managed environments
-
-### Legacy & Niche Utilities
-
-- Fax & Scan services
-- XPS Viewer and XPS print driver
-- Remote Assistance (distinct from Remote Desktop)
-- Windows Mixed Reality framework
-- Retail Demo Mode content
-- Offline Maps service and local speech recognition data
+**10-Year Security Support**
+Aligned with the IoT Enterprise LTSC servicing model — critical security updates through 2034, with no disruptive feature upgrades.
 
 -----
 
-## Optimizations Applied
+## Requirements
 
-**ISO size** — All Windows editions except Pro are stripped from the install image, significantly reducing ISO and install footprint.
+- USB flash drive (8 GB or larger)
+- [Rufus](https://rufus.ie/) or equivalent flashing utility
+- A system meeting Windows 11 baseline hardware requirements
 
-**RAM at idle** — Local speech recognition datasets and the offline maps service are removed, eliminating background indexing processes that load into memory on boot.
-
-**Disk space** — Retail Demo content and the Mixed Reality framework are excised before image capture, reclaiming several gigabytes on the final install.
+> **Note:** The IoT Enterprise LTSC foundation has relaxed enforcement of TPM 2.0 and Secure Boot compared to retail Windows 11 editions.
 
 -----
 
 ## Installation
 
-**Requirements:** A USB drive of at least 8 GB and a machine with Secure Boot configurable (can be left on or disabled depending on your setup).
-
-1. **Obtain the ISO** — Download the pre-built image, or build it yourself using MSMG Toolkit with the configuration files in this repository.
-1. **Flash to USB** — Use [Rufus](https://rufus.ie) with the default GPT + UEFI settings for modern hardware, or MBR for legacy BIOS systems.
-1. **Boot and install** — Enter your firmware boot menu, select the USB drive, and proceed through a standard Windows setup.
-
-> **Note:** Because certain default apps and services are absent, the initial OOBE (out-of-box experience) may skip a few setup screens. This is expected behaviour.
-
------
-
-## Build It Yourself
-
-All MSMG Toolkit configuration files used to produce this image are included in the `/config` directory. To reproduce the build:
-
-```
-1. Install MSMG Toolkit on a Windows host
-2. Mount a retail Windows 11 Pro ISO
-3. Apply the config files from /config
-4. Run the toolkit's removal and integration steps
-5. Capture the modified image to a new ISO
-```
-
-Refer to the [MSMG Toolkit documentation](https://msmgtoolkit.in/) for full build instructions.
+1. **Download** the latest `Super11_IoT.iso` from the [Releases](../../releases) page.
+1. **Flash to USB** using Rufus. Select the ISO and your target drive, then proceed with default settings.
+1. **Optional — Additional Privacy Hardening:** When Rufus prompts with customization options, enable *“Bypass requirement for an online Microsoft account”* and *“Disable data collection”* for redundant enforcement at the Rufus level.
+1. **Prepare your machine:** Disconnect your Ethernet cable before booting. This is a precaution; the answer file already handles offline enforcement.
+1. **Boot from USB** and allow the unattended installation to complete. When prompted for network connectivity, skip and proceed with a local account.
 
 -----
 
 ## Disclaimer
 
-This project modifies a Windows installation image for personal use. It is not affiliated with or endorsed by Microsoft. Removing system components may affect compatibility with certain software or Windows Update behaviour. Use at your own discretion.
+This is an unofficial, community-built Windows image and is not affiliated with or endorsed by Microsoft.
+
+- Provided **as-is**, without warranty of any kind, express or implied.
+- A valid Windows 11 IoT Enterprise LTSC digital license or product key is **required** and is not included.
+- Back up all critical data before proceeding. Installation will wipe the target drive.
+
+-----
+
+## Acknowledgements
+
+- [MSMG Toolkit](https://msmgtoolkit.in/) — the tooling that makes deep image modification possible.
+- Built and maintained by [Your GitHub Username](https://github.com/).
