@@ -1,6 +1,6 @@
 # Super11
 
-A privacy-hardened, telemetry-free Windows 11 IoT Enterprise LTSC installation image built with [MSMG Toolkit](https://msmgtoolkit.in/). Engineered for sustained performance, long-term stability, and a minimal attack surface — without the overhead of consumer telemetry, bundled applications, or forced online account requirements.
+A privacy-hardened, telemetry-free Windows 11 IoT Enterprise LTSC installation image built with [MSMG Toolkit](https://msmgtoolkit.in/). Engineered for sustained performance, long-term stability, and a minimal attack surface, without the overhead of consumer telemetry, bundled applications, or forced online account requirements.
 
 -----
 
@@ -56,4 +56,4 @@ This is an unofficial, community-built Windows image and is not affiliated with 
 ## Acknowledgements
 
 - [MSMG Toolkit](https://msmgtoolkit.in/) — the tooling that makes deep image modification possible.
-- Built and maintained by [Your GitHub Username](https://github.com/).
+- Built and maintained by CoolMonii (me).
