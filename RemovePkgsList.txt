@@ -1,0 +1,11 @@
+CEIP
+UnifiedTelemetryClient
+WindowsErrorReporting
+AssignedAccess
+MultiPointConnector
+WorkFoldersClient
+RetailDemoContent
+RemoteAssistance
+ParentalControls
+HolographicFirstRun
+WindowsMixedReality
