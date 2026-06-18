@@ -37,7 +37,7 @@ Aligned with the IoT Enterprise LTSC servicing model - critical security updates
 
 1. **Download** the latest `Super11.iso` from the [Releases](../../releases) page.
 1. **Flash to USB** using Rufus. Select the ISO and your target drive, then proceed with default settings.
-1. **Optional — Additional Privacy Hardening:** When Rufus prompts with customization options, enable *“Bypass requirement for an online Microsoft account”* and *“Disable data collection”* for redundant enforcement at the Rufus level.
+1. **Optional - Additional Privacy Hardening:** When Rufus prompts with customization options, enable *“Bypass requirement for an online Microsoft account”* and *“Disable data collection”* for redundant enforcement at the Rufus level.
 1. **Prepare your machine:** Disconnect your Ethernet cable before booting. This is a precaution; the answer file already handles offline enforcement.
 1. **Boot from USB** and allow the unattended installation to complete. When prompted for network connectivity, skip and proceed with a local account.
 
